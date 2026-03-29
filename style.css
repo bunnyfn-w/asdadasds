@@ -1,0 +1,134 @@
+:root {
+    --bg: #050205;
+    --accent: #8A2BE2;
+    --neon: #DDA0DD;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Background Effects */
+.bg-glow {
+    position: fixed;
+    top: -10%; left: -10%;
+    width: 40%; height: 40%;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -1;
+}
+
+/* Nav */
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 30px 10%;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem; font-weight: bold; letter-spacing: 2px;
+}
+
+.logo span { color: var(--accent); text-shadow: 0 0 15px var(--accent); }
+
+.nav-links a {
+    color: #888; text-decoration: none; margin-left: 30px;
+    transition: 0.3s; font-weight: bold;
+}
+
+.nav-links a:hover { color: white; }
+
+/* Hero */
+header {
+    height: 90vh;
+    display: flex; justify-content: center; align-items: center;
+    text-align: center; padding: 0 10%;
+}
+
+.hero-logo {
+    width: 150px; margin-bottom: 20px;
+    filter: drop-shadow(0 0 30px var(--accent));
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 4rem; line-height: 1; margin-bottom: 20px;
+}
+
+h1 span { color: var(--neon); text-shadow: 0 0 20px var(--accent); }
+
+p { font-size: 1.2rem; color: #aaa; max-width: 600px; margin: 0 auto 40px; }
+
+/* Buttons */
+.btn-main {
+    background: var(--accent);
+    color: white; padding: 18px 40px;
+    text-decoration: none; border-radius: 5px;
+    font-weight: bold; font-size: 1.1rem;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    transition: 0.3s; display: inline-block;
+}
+
+.btn-main:hover { transform: scale(1.05); box-shadow: 0 0 40px var(--accent); }
+
+.btn-sec {
+    color: white; border: 1px solid #444;
+    padding: 18px 40px; margin-left: 20px;
+    text-decoration: none; border-radius: 5px; transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-sec:hover { background: rgba(255,255,255,0.1); }
+
+/* Features */
+#features {
+    display: flex; justify-content: center; gap: 30px;
+    padding: 100px 10%; flex-wrap: wrap;
+}
+
+.feature-card {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px; border-radius: 15px; width: 300px;
+    text-align: center; transition: 0.4s;
+}
+
+.feature-card.active { border-color: var(--accent); background: rgba(138, 43, 226, 0.05); }
+
+.feature-card:hover { transform: translateY(-10px); background: rgba(255,255,255,0.08); }
+
+.feature-card .icon { font-size: 3rem; margin-bottom: 20px; }
+
+/* Download */
+.download-section {
+    padding: 150px 10%; text-align: center;
+}
+
+.download-box {
+    background: linear-gradient(145deg, #111, #050505);
+    padding: 60px; border-radius: 20px; margin-top: 50px;
+    border: 1px solid var(--accent);
+}
+
+.btn-download-big {
+    display: block; width: fit-content; margin: 30px auto;
+    background: white; color: black; padding: 20px 60px;
+    text-decoration: none; font-size: 1.5rem; font-weight: bold;
+    font-family: 'Orbitron', sans-serif; border-radius: 5px;
+}
+
+.file-info { color: #555; font-size: 0.9rem; text-transform: uppercase; }
+
+footer {
+    padding: 50px; text-align: center; color: #444; font-size: 0.8rem;
+    letter-spacing: 2px;
+}
